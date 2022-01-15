@@ -266,7 +266,7 @@ section {
   width: 100%;
 }
 
-section:nth-child(even) {
+section.alternate:nth-child(odd) {
   background-color: #eee;
 }
 

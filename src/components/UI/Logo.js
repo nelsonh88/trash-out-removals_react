@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 
 import logoImage from "../../assets/trash-out-removals-logo.png";
 

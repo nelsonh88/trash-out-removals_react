@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 
 const HeaderWrapper = (props) => {
   return <div className="header-wrapper">{props.children}</div>;

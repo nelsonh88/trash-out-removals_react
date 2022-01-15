@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import Header from "./components/Header/Header";
 import Navigation from "./components/Navigation/Navigation";
+import MainWrapper from "./components/UI/MainWrapper";
+import InfoCard from "./components/Cards/InfoCard";
 
 const navItems = [
   {
@@ -32,6 +34,9 @@ function App() {
     <React.Fragment>
       <Header toggle={onToggleHandler}></Header>
       {displayNav ? <Navigation navItems={navItems}></Navigation> : ""}
+      <MainWrapper>
+        <InfoCard></InfoCard>
+      </MainWrapper>
     </React.Fragment>
   );
 }
