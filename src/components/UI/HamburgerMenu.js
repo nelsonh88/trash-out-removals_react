@@ -1,10 +1,15 @@
 import react from "react";
 
-const HamburgerMenu = () => {
+const HamburgerMenu = (props) => {
   return (
-    <div class="ham-menu">
-      <button class="ham-btn" id="ham-btn" onclick="toggle()">
-        <span class="fas fa-bars"></span>
+    <div className="ham-menu">
+      <button
+        className="ham-btn"
+        id="ham-btn"
+        type={props.type || "button"}
+        onClick={props.toggle}
+      >
+        <span className="fas fa-bars"></span>
       </button>
     </div>
   );
