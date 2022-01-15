@@ -1,4 +1,4 @@
-import react from "react";
+import React, { useState } from "react";
 
 import HeaderWrapper from "./HeaderWrapper";
 import Logo from "../UI/Logo";
@@ -7,9 +7,6 @@ import EmailContact from "../UI/EmailContact";
 import HamburgerMenu from "../UI/HamburgerMenu";
 
 const Header = (props) => {
-  const onToggleHandler = () => {
-    console.log("Hamburger menu clicked");
-  };
   return (
     <header>
       <HeaderWrapper>
@@ -21,7 +18,7 @@ const Header = (props) => {
           <span className="far fa-envelope"></span>
         </EmailContact>
       </HeaderWrapper>
-      <HamburgerMenu toggle={onToggleHandler}></HamburgerMenu>
+      <HamburgerMenu onClick={props.toggle}></HamburgerMenu>
     </header>
   );
 };

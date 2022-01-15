@@ -7,7 +7,7 @@ const HamburgerMenu = (props) => {
         className="ham-btn"
         id="ham-btn"
         type={props.type || "button"}
-        onClick={props.toggle}
+        onClick={props.onClick}
       >
         <span className="fas fa-bars"></span>
       </button>

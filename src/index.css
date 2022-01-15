@@ -226,7 +226,7 @@ main {
 }
 
 div#nav-links {
-  display: none;
+  /* display: none; */
   width: 100%;
   text-align: center;
   position: fixed;

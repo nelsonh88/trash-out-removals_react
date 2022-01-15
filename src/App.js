@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Header from "./components/Header/Header";
 import Navigation from "./components/Navigation/Navigation";
@@ -23,10 +23,15 @@ const navItems = [
 ];
 
 function App() {
+  const [displayNav, setDisplayNav] = useState(false);
+  const onToggleHandler = () => {
+    setDisplayNav(!displayNav);
+  };
+
   return (
     <React.Fragment>
-      <Header></Header>
-      <Navigation navItems={navItems}></Navigation>
+      <Header toggle={onToggleHandler}></Header>
+      {displayNav ? <Navigation navItems={navItems}></Navigation> : ""}
     </React.Fragment>
   );
 }
