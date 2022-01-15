@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import HeaderWrapper from "./HeaderWrapper";
 import Logo from "../UI/Logo";
