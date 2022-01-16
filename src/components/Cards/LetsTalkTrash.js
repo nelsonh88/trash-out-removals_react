@@ -9,7 +9,7 @@ import junkyardImg from "../../assets/junkyard.png";
 
 const LetsTalkTrash = () => {
   return (
-    <section className="info" id="service-section">
+    <section className="info alternate" id="service-section">
       <Headline text="Let's Talk Trash"></Headline>
       <DetailsBody
         className="fas fa-trash-alt"
