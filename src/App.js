@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Navigation from "./components/Navigation/Navigation";
 import MainWrapper from "./components/UI/MainWrapper";
 import InfoCard from "./components/Cards/InfoCard";
+import LetsTalkTrash from "./components/Cards/LetsTalkTrash";
 
 const navItems = [
   {
@@ -36,6 +37,7 @@ function App() {
       {displayNav ? <Navigation navItems={navItems}></Navigation> : ""}
       <MainWrapper>
         <InfoCard></InfoCard>
+        <LetsTalkTrash></LetsTalkTrash>
       </MainWrapper>
     </React.Fragment>
   );
