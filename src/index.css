@@ -246,10 +246,6 @@ div.nav-links li {
   list-style: none;
 }
 
-li.divider {
-  display: none;
-}
-
 main section p,
 h3,
 ul {
@@ -451,13 +447,14 @@ footer p#copyright {
     color: #0c56b3;
   }
 
+  .nav-links nav li:not(li:first-of-type)::before {
+    content: "|";
+    margin-right: 2rem;
+  }
+
   div#nav-links a {
     text-decoration: none;
     color: #0c56b3;
-  }
-
-  li.divider {
-    display: block;
   }
 
   button.cta {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Header from "./components/Header/Header";
 import Navigation from "./components/Navigation/Navigation";
@@ -31,6 +31,20 @@ const navItems = [
 
 function App() {
   const [displayNav, setDisplayNav] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [width]);
+
+  useEffect(() => {
+    width > 768 && setDisplayNav(false);
+  }, [width]);
+
   const onToggleHandler = () => {
     setDisplayNav(!displayNav);
   };
@@ -38,8 +52,9 @@ function App() {
   return (
     <React.Fragment>
       <Header toggle={onToggleHandler}></Header>
-      {displayNav ? <Navigation navItems={navItems}></Navigation> : ""}
       <MainWrapper>
+        {displayNav ? <Navigation navItems={navItems}></Navigation> : ""}
+        {width >= 768 ? <Navigation navItems={navItems}></Navigation> : ""}
         <InfoCard></InfoCard>
         <LetsTalkTrash></LetsTalkTrash>
         <GotQuestionsCard></GotQuestionsCard>
