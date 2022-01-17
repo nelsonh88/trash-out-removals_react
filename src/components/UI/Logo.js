@@ -8,6 +8,7 @@ const Logo = (props) => {
       <a href="#wrapper">
         <img src={logoImage} alt="Trash Out Removals Logo" />
       </a>
+      {props.children}
     </div>
   );
 };

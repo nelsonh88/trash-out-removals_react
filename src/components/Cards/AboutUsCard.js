@@ -4,7 +4,7 @@ import Headline from "../UI/Headline";
 
 const AboutUsCard = () => {
   return (
-    <section className="info alternate" id="questions-section">
+    <section className="info alternate" id="about-us-section">
       <Headline text="About Us"></Headline>
       <p>
         Trash Out Removals can take care of all your junk removal needs

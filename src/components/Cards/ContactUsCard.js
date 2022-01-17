@@ -6,7 +6,7 @@ import Button from "../UI/Button";
 const ContactUsCard = () => {
   return (
     <section className="info alternate" id="contact-us-section">
-      <Headline text="About Us"></Headline>
+      <Headline text="Contact Us"></Headline>
       <p>
         Email:{" "}
         <a
