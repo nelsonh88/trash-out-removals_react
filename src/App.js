@@ -52,8 +52,8 @@ function App() {
   return (
     <React.Fragment>
       <Header toggle={onToggleHandler}></Header>
+      {displayNav ? <Navigation navItems={navItems}></Navigation> : ""}
       <MainWrapper>
-        {displayNav ? <Navigation navItems={navItems}></Navigation> : ""}
         {width >= 768 ? <Navigation navItems={navItems}></Navigation> : ""}
         <InfoCard></InfoCard>
         <LetsTalkTrash></LetsTalkTrash>
